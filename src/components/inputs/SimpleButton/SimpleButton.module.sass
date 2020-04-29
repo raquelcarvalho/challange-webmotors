@@ -1,0 +1,54 @@
+@import ../../../style/_variables.sass
+@import ../../../style/_mixins.sass
+
+.button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 30px
+	min-width: 40px
+	padding: 2px
+
+	background-color: $regularColor
+	color: $regularConrastColor
+	border-radius: $inputRadius
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	outline: none
+
+	text-transform: uppercase
+	font-weight: $actionFontWeight
+	font-size: small
+
+	transition: box-shadow $interactionTime 50ms, transform $interactionTime 50ms
+	cursor: pointer
+
+	box-sizing: border-box
+
+	*
+		pointer-events: none
+
+	> strong
+		color: $regularConrastColor
+
+	&:hover:not(:active)
+		color: $actionColor
+
+.button.submit
+	background-color: $actionColor
+	color: $actionConrastColor
+	&:focus:not(:active),
+		color: $actionConrastColor
+	&:hover:not(:active)
+		box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2)
+		color: $actionConrastColor
+		> :global(.icon)
+			fill: $actionConrastColor
+
+.button.critical
+	background-color: $criticalColor
+	color: $actionConrastColor
+	&:focus:not(:active),
+		color: $actionConrastColor
+	&:hover:not(:active)
+		box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2)
+		color: $actionConrastColor

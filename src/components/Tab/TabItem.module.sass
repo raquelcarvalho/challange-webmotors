@@ -1,0 +1,43 @@
+@import ../../style/_variables.sass
+@import ../../style/_mixins.sass
+
+.tab-item
+  border-bottom: 2px solid #f3123c
+  cursor: pointer
+  padding: 0 20px
+  height: 50px
+  display: flex
+  align-items: flex-end
+
+.tab-item--inactive
+  opacity: 0.3
+  filter: grayscale(100%)
+
+.tab-item__icon
+  width: 45px
+  margin-bottom: 5px
+  margin-right: 10px
+  filter: invert(23%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(135%)
+
+.tab-item__text
+  text-transform: uppercase
+  display: flex
+  flex-direction: column
+
+.tab-item__subtitle
+  font-size: 0.7em
+  color: $strongTextColor
+
+.tab-item__title
+  font-size: 1.3em
+  color: #f3123c
+
++phone
+  .tab-item__icon
+    width: 35px
+
+  .tab-item__subtitle
+    font-size: 0.5em
+
+  .tab-item__title
+    font-size: 1em

@@ -1,0 +1,39 @@
+@import ../../style/_variables.sass
+@import ../../style/_mixins.sass
+
+@keyframes bump
+	from
+		opacity: 0
+		transform: scale(0, 0)
+
+	to
+		opacity: 1
+		transform: scale(1, 1)
+
+.loading-container
+	display: flex
+	justify-content: center
+
+.loading-indicator
+	display: inline-flex
+
+	> *
+		display: inline-block
+		width: 10px
+		height: 10px
+		border-radius: 8px
+
+		background: $textColor
+		opacity: 0
+
+		transform: scale(0, 0)
+		animation: bump 600ms alternate infinite
+
+		&:nth-child(n+2)
+			animation-delay: 200ms
+
+		&:nth-child(n+3)
+			animation-delay: 400ms
+
+		+ *
+			margin-left: 4px

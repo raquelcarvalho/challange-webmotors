@@ -1,0 +1,39 @@
+@import ../../../style/_variables.sass
+@import ../../../style/_mixins.sass
+
+.container
+	display: block
+
+.label
+	display: flex
+	white-space: nowrap
+	margin: 0
+	margin-bottom: 0.4rem
+	*
+		line-height: 1em
+		box-sizing: border-box
+
+.input
+	appearance: none
+	display: flex
+	align-items: center
+	width: 100%
+	min-height: 40px
+	padding: 0.5ch 1ch
+	box-sizing: border-box
+	line-height: 120%
+	border-radius: $inputRadius
+	font-size: $inputFontSize
+	border: 1px solid transparent
+
+	border-color: $inputBorderColor
+	background-color: $inputBackgroundColor
+	color: $inputColor
+
+	outline: none
+
+	&:innvalid
+		border-color: red
+
+	&:focus
+		border-color: $inputBorderColorFocus
